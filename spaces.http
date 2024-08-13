@@ -1,0 +1,30 @@
+@url = https://zcjpjbl5sg.execute-api.us-east-1.amazonaws.com/prod
+@token = eyJraWQiOiJSR2FIRzgxR0ZYQWJhUVUrMjRSb0pIUjVCWGY4cVFXQjR0SzNsRUxJaFEwPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4NDI4ODRiOC1lMDExLTcwZmQtNjExOS1lOTFkMWMxN2NhNjQiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfQ3A1U0FYN0ZmIiwiY29nbml0bzp1c2VybmFtZSI6ImJhcnJ5LmIiLCJvcmlnaW5fanRpIjoiZWI5MDQ3OGQtMTJmZC00OTcxLWI2NmEtYTc1NzI3MDk4OWQwIiwiYXVkIjoiNDk4YjV0NnYwZmg0MGoxaWhtNGxyanBpcCIsImV2ZW50X2lkIjoiZDE2NGYxMTItZGM2Yy00MjJhLWJmZWItMTJlN2RmMmM3YTU4IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3MjI4NzQ0NzcsImV4cCI6MTcyMjg3ODA3NywiaWF0IjoxNzIyODc0NDc3LCJqdGkiOiJlYTYyMGJjNy00NmVkLTQ2YzItOTIzOC03Y2FkYzE1OGEzZWUiLCJlbWFpbCI6ImJhcnJ5QGJhcm9uYXMubmV0In0.dx7oYksIP-4BL6zgHZ-Ew62RJTyIahuuzFEIurz71Cy6Ljk5HEAZO4r2ELrdCnY2dm5XXpdJ6PALEFacbTeDRr4PtnLzdg8AjDaWMt623ibkyrZvesh2TdAUqMl8DrM7TGCK2yhe-5MUn59pMxwMMAJ55RWz-XzlZZi8Rik2fd2vHHC2edrgGa_tvMMmjYIOwM37LZwCjhMpDJvdXlUKyMJdwXudP5qQ4H6D5Dae7JXOGlpj3E1SbLsU9rk5r7YLSRqJt9DRfSeUZhHCuPEuTyNGdRP8wCaOjJHFut0NbpgeOZQou591uBck5cm1PObvcPIEHeOH9tmQ5QC1YpOFVQ
+
+GET {{url}}/spaces
+Authorization: {{token}}
+###
+
+GET {{url}}/spaces?id=dbc91408-03fe-41c3-9db8-f52b12ac1c90
+###
+
+DELETE {{url}}/spaces?id=05fa0538-f0cb-4ba0-8cce-3030ca481ee6
+Authorization: {{token}}
+###
+
+POST {{url}}/spaces
+content-type: application/json
+
+{
+    "location": "Plymouth, MA",
+    "name": "America's Hometown"
+}
+###
+
+PUT{{url}}/spaces?id=dbc91408-03fe-41c3-9db8-f52b12ac1c90
+content-type: application/json
+
+{
+    "name": "We have a rock"
+}
+###
