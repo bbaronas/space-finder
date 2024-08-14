@@ -6,9 +6,9 @@ async function testAuth() {
     const service = new AuthService();
     const loginResult = await service.login(
         'barry.b',
-        'qxc_rpc0eap1BWT6dnz'
+        'fym5bfa1bxn_bmk_VAX'
     );
-    // console.log(loginResult);
+    console.log(loginResult);
     const credentials = await service.generateTemporaryCrebentials(loginResult);
     // console.log(credentials);
     const buckets = await listBuckets(credentials);

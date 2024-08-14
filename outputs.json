@@ -1,23 +1,23 @@
 {
   "UiDeploymentStack": {
-    "SpaceFinderUrl": "dksjy05svodss.cloudfront.net"
+    "SpaceFinderUrl": "d2liidzkoe6vht.cloudfront.net"
   },
   "DataStack": {
-    "ExportsOutputFnGetAttSpaceFinderPhotosE708E252Arn354BE01C": "arn:aws:s3:::space-finder-photos-0afff9fdaf01",
-    "ExportsOutputRefSpacesTable8A9973559FB4B87D": "SpacesTable-0afff9fdaf01",
-    "SpaceFinderPhotosBucketName": "space-finder-photos-0afff9fdaf01",
-    "ExportsOutputFnGetAttSpacesTable8A997355Arn242927FE": "arn:aws:dynamodb:us-east-1:630323321831:table/SpacesTable-0afff9fdaf01"
-  },
-  "AuthStack": {
-    "ExportsOutputFnGetAttSpaceUserPool6AB542DCArnC2E21F85": "arn:aws:cognito-idp:us-east-1:630323321831:userpool/us-east-1_Cp5SAX7Ff",
-    "SpaceUserPoolId": "us-east-1_Cp5SAX7Ff",
-    "SpaceUserPoolClientId": "498b5t6v0fh40j1ihm4lrjpip",
-    "SpaceIdentityPoolId": "us-east-1:eafa3e67-5cbf-4e90-b42d-b92b994f97c9"
+    "ExportsOutputFnGetAttSpaceFinderPhotosE708E252Arn354BE01C": "arn:aws:s3:::space-finder-photos-122882eb0d83",
+    "ExportsOutputRefSpacesTable8A9973559FB4B87D": "SpacesTable-122882eb0d83",
+    "SpaceFinderPhotosBucketName": "space-finder-photos-122882eb0d83",
+    "ExportsOutputFnGetAttSpacesTable8A997355Arn242927FE": "arn:aws:dynamodb:us-east-1:630323321831:table/SpacesTable-122882eb0d83"
   },
   "LambdaStack": {
-    "ExportsOutputFnGetAttSpacesLambdaA5F923A4ArnE59FF2BB": "arn:aws:lambda:us-east-1:630323321831:function:LambdaStack-SpacesLambdaA5F923A4-9ryYuCUVkMXR"
+    "ExportsOutputFnGetAttSpacesLambdaA5F923A4ArnE59FF2BB": "arn:aws:lambda:us-east-1:630323321831:function:LambdaStack-SpacesLambdaA5F923A4-rIZCcsGzpf14"
+  },
+  "AuthStack": {
+    "ExportsOutputFnGetAttSpaceUserPool6AB542DCArnC2E21F85": "arn:aws:cognito-idp:us-east-1:630323321831:userpool/us-east-1_K9RhIfgNj",
+    "SpaceUserPoolId": "us-east-1_K9RhIfgNj",
+    "SpaceUserPoolClientId": "3mvr2fsbntvko6a267berritqo",
+    "SpaceIdentityPoolId": "us-east-1:0a536154-40f5-4ed9-b46a-c3eecf5cd806"
   },
   "ApiStack": {
-    "SpacesApiEndpoint36C4F3B6": "https://zcjpjbl5sg.execute-api.us-east-1.amazonaws.com/prod/"
+    "SpacesApiEndpoint36C4F3B6": "https://ez2j5fa4ud.execute-api.us-east-1.amazonaws.com/prod/"
   }
 }

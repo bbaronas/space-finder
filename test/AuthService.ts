@@ -8,9 +8,9 @@ const awsRegion = 'us-east-1';
 Amplify.configure({
     Auth: {
         region: awsRegion,
-        userPoolId: 'us-east-1_Cp5SAX7Ff',
-        userPoolWebClientId: '498b5t6v0fh40j1ihm4lrjpip',
-        identityPoolId: 'us-east-1:eafa3e67-5cbf-4e90-b42d-b92b994f97c9',
+        userPoolId: 'us-east-1_K9RhIfgNj',
+        userPoolWebClientId: '3mvr2fsbntvko6a267berritqo',
+        identityPoolId: 'us-east-1:0a536154-40f5-4ed9-b46a-c3eecf5cd806',
         authenticationFlowType: 'USER_PASSWORD_AUTH'
     }
 })
@@ -24,10 +24,10 @@ export class AuthService {
 
     public async generateTemporaryCrebentials(user: CognitoUser) {
         const jwtToken = user.getSignInUserSession()!.getIdToken().getJwtToken();
-        const cognitoIdentityPool = `cognito-idp.${awsRegion}.amazonaws.com/us-east-1_Cp5SAX7Ff`;
+        const cognitoIdentityPool = `cognito-idp.${awsRegion}.amazonaws.com/us-east-1_K9RhIfgNj`;
         const cognitoIdentity = new CognitoIdentityClient({
             credentials: fromCognitoIdentityPool({
-                identityPoolId: 'us-east-1:eafa3e67-5cbf-4e90-b42d-b92b994f97c9',
+                identityPoolId: 'us-east-1:0a536154-40f5-4ed9-b46a-c3eecf5cd806',
                 logins: {
                     [cognitoIdentityPool]: jwtToken
                 }

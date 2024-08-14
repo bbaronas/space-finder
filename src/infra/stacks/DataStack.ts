@@ -4,6 +4,7 @@ import { Construct } from 'constructs';
 import { getSuffixFromStack } from '../Utils';
 import { BlockPublicAccess, Bucket, ObjectOwnership, BucketAccessControl, HttpMethods, IBucket } from 'aws-cdk-lib/aws-s3';
 import { AllowedMethods } from 'aws-cdk-lib/aws-cloudfront';
+import { AnyPrincipal, Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 
 
 export class DataStack extends Stack {
@@ -26,8 +27,9 @@ export class DataStack extends Stack {
                 allowedOrigins: ['*'],
                 allowedHeaders: ['*']
             }],
+            objectOwnership: ObjectOwnership.OBJECT_WRITER,
             // accessControl: BucketAccessControl.PUBLIC_READ,
-            // objectOwnership: ObjectOwnership.OBJECT_WRITER,
+            // publicReadAccess: true,
             blockPublicAccess: {
                 blockPublicAcls: false,
                 blockPublicPolicy: false,
@@ -35,6 +37,15 @@ export class DataStack extends Stack {
                 restrictPublicBuckets: false
             }
         });
+
+        // this.photosBucket.addToResourcePolicy(
+        //     new PolicyStatement({
+        //         effect: Effect.ALLOW,
+        //         actions: ['s3:GetObject'],
+        //         resources: [this.photosBucket.arnForObjects('*')],
+        //         principals: [new AnyPrincipal()]
+        //     })
+        // )
 
         new CfnOutput(this, 'SpaceFinderPhotosBucketName', {
             value: this.photosBucket.bucketName
