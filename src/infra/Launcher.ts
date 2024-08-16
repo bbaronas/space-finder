@@ -4,6 +4,7 @@ import { LambdaStack } from "./stacks/LambdaStack";
 import { ApiStack } from "./stacks/ApiStack";
 import { AuthStack } from "./stacks/AuthStack";
 import { UiDeploymentStack } from "./stacks/UiDeploymentStack";
+import { MonitorStack } from "./stacks/MonitorStack";
 
 
 
@@ -20,3 +21,4 @@ new ApiStack(app, 'ApiStack', {
     userPool: authStack.userPool
 });
 new UiDeploymentStack(app, 'UiDeploymentStack');
+new MonitorStack(app, 'MonitorStack');
